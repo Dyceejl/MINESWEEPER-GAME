@@ -1,0 +1,150 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.clear{
+    clear: both;
+}
+
+#header{
+    background: linear-gradient(45deg, #ff7f50, #48d1cc );
+    height: 46px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    position: fixed;
+}
+
+#nav{
+    display: inline-block;
+}
+
+#nav li{
+    position: relative;
+}
+
+#nav > li{
+    display: inline-block;
+}
+
+#nav li a{
+    line-height: 46px;
+    padding: 0 24px;
+    text-decoration: none;
+    display: block;
+}
+
+#nav > li > a{
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 16px;
+    color: #3e3d3d;
+    font-weight: 770;
+    text-transform: uppercase;
+}
+#nav > li:hover > a{
+    color: #000;
+    background-color: #ccc;
+}
+
+/*slide*/
+.bg-img {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-img .beginner {
+    margin-top: 200px;
+    margin-right: 100px; /* Adjust the value as needed */
+    width: 20%;
+    height: auto;
+    border: 2px solid black;
+    border-radius: 10px; 
+    padding: 15px;
+}
+
+.bg-img .intermediate {
+    margin-top: 200px;
+    width: 25%;
+    height: auto;
+    border: 2px solid black; 
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.bg-img .expert {
+    margin-top: 220px;
+    margin-left: 50px; 
+    width: 30%;
+    height: auto;
+    border: 2px solid black; 
+    border-radius: 10px; 
+    padding: 15px;
+}
+
+.bg-img .label {
+    position: absolute;
+    top: 36%;
+    left: 17%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    font-size: 25px;
+    color: orange;
+}
+.bg-img .label2 {
+    position: absolute;
+    top: 32%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    font-size: 25px;
+    color:#23af23
+}
+
+.bg-img .label3 {
+    position: absolute;
+    top: 43%;
+    left: 78%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    font-size: 25px;
+    color: #20b2aa ;
+}
+
+#slide .text-content{
+    position: absolute;
+    top: 0;
+    color: #00827f;   
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 46px 16px;
+    text-align: center; 
+    display: flex; 
+    align-items: center; 
+}
+
+#slide .text-heading{
+    margin: 10px 0;
+    font-weight: 700;
+    font-size: 68px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 0 0 6px #787777;
+    letter-spacing: 5px;
+    display: inline-flex;
+    align-items: center; 
+     justify-content: space-between;
+}
+
+#slide .text-content .text-heading .flag-icon {
+    margin: 0 5px;
+    text-shadow: 0 0 0px #787777;
+}
