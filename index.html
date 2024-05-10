@@ -12,35 +12,31 @@
     <link rel="icon" href="./assets/img/game icon/favicon.ico" />
 </head>
 
-<div id="main">
-    <!--Task bar-->
-    <div id="header">
-        <ul id="nav">
-            <li><a href="#about-game">About game</a></li>
-            <li><a href="#rules">Rules</a></li>
-            <li><a href="#feedback">Feedback</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#game">PLAY GAME</a></li>
-        </ul>
+    <body onload="init('easy')">
+    <div id="main">
+        <!--Task bar-->
+        <div id="header">
+            <ul id="nav">
+                <li><a href="#game">Play game</a></li>
+                <li><a href="rules">Rules</a></li>
+                <li><a href="feedback">Feedback</a></li>
+                <li><a href="contact">contact</a></li>
+            </ul>
+        </div>
+
+        <div id="slide">
+            <div class="text-content">
+                <h2 class="text-heading">MINESWEEPER</h2>
+            </div>
+        </div>
     </div>
 
-    <div id="slide">
+    <div id="game">        
         <div class="bg-img">
-            <p class="label">Beginner</p>
-            <img src="res\images\beginner.png" alt="bg-img" class="beginner">
-            <p class="label2">Intermediate</p>
-            <img src="res\images\intermediate.png" alt="bg-img" class="intermediate">
-            <p class="label3">Expert</p>
-            <img src="res\images\expert.png" alt="bg-img" class="expert">
-        </div>
-        <div class="text-content">
-            <h2 class="text-heading">
-                <span class="flag-icon">🚩</span>
-                <span class="text">MINESWEEPER</span>
-                <span class="flag-icon">🚩</span>
-            </h2>
+            <img src="res\images\background.jpeg" alt="bg-img">
         </div>
     </div>
-
+    
 </body>
+
 </html>
