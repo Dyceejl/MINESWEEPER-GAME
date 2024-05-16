@@ -5,11 +5,6 @@
     <meta name="viewport" content=""width=device-width, initial-scale="1.0">
     <title>Project DSA</title>
     <link rel="stylesheet" href="res\css\style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="./assets/themify-icons/themify-icons.css">
-    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="./assets/img/game icon/favicon.png"/>
-    <link rel="icon" href="./assets/img/game icon/favicon.ico" />
 </head>
 
     <body onload="init('easy')">
@@ -36,10 +31,30 @@
             <img src="res\images\background.jpeg" alt="bg-img">
         </div>
     </div>
+
+    <div class="options-info">
+        <span class="level-choice">
+            <button onclick="handleLevel('easy')">easy</button>
+            <button onclick="handleLevel('medium')">medium</button>
+            <button onclick="handleLevel('hard')">hard</button>
+        </span>
+        <span class="lives"></span>
+        <span class="timers">00:00</span>
+        <br>
+        <span class="player" onclick="restart()"></span>
+    </div>
+
+    <div class="game-board">
+        <table></table>
+    </div>
+    <div class="game-result"></div>
+    <div><button class="restart hidden" 
+        onclick ="restart()">restart</button>
+    </div>
+    
+    <script src="game.js"></script>
+    <script src="util.js"></script>
+
     
 </body>
-
-<script src="game.js"></script>
-<script src="util.js"></script>
-
 </html>
