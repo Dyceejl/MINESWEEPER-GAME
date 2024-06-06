@@ -7,11 +7,12 @@ const renderer = new Renderer();
 
 const MINE = '💣';
 const FLAG = '🚩';
-const NORMAL = '🥹';
+const NORMAL = '😄';
 const HAPPY = '😍';
-const SAD = '🤧';
-const DEAD = '🥵';
-const HAPPY_WIN = '🥳';
+const SAD = '😭';
+const DEAD = '💀';
+const HAPPY_WIN = '😎';
+
 
 var gElLives = document.querySelector('.lives');
 var gElPlayer = document.querySelector('.player');
@@ -23,17 +24,17 @@ function init(){
 
 function handleLevel(levelSize) {
     switch (levelSize) {
-        case 4:
-            game.gLevel.size = 4;
-            game.gLevel.mines = 2;
+        case 6:
+            game.gLevel.size = 6;
+            game.gLevel.mines = 3;
             game.gLevel.lives = 1;
             game.gLevel.hints = 1;
             game.gLevel.safeClicks = 1;
             game.gLevel.bestTime = +localStorage.besttimeeasy;
             break;
-        case 8:
-            game.gLevel.size = 8;
-            game.gLevel.mines = 12;
+        case 10:
+            game.gLevel.size = 10;
+            game.gLevel.mines = 15;
             game.gLevel.lives = 3;
             game.gLevel.hints = 3;
             game.gLevel.safeClicks = 2;

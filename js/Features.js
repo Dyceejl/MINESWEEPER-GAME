@@ -12,14 +12,14 @@ class Features{
         game.gLevel.hints--;
     
         var elLightBulbs = document.querySelector('.sneak-peek');
-        if (game.gLevel.size === 4) {
-            elLightBulbs.innerText = '✖️';
+        if (game.gLevel.size === 6) {
+            elLightBulbs.innerText = '❌';
             return;
         }
     
-        if (game.gLevel.hints === 2) elLightBulbs.innerText = '💡💡✖️'
-        else if (game.gLevel.hints === 1) elLightBulbs.innerText = '💡✖️✖️'
-        else elLightBulbs.innerText = '✖️✖️✖️'
+        if (game.gLevel.hints === 2) elLightBulbs.innerText = '🔍🔍❌'
+        else if (game.gLevel.hints === 1) elLightBulbs.innerText = '🔍❌❌'
+        else elLightBulbs.innerText = '❌❌❌'
     }
 
     showSneakPeek(rowIdx, colIdx) {
@@ -53,7 +53,7 @@ class Features{
         if (!game.gGame.isOn) return;
         if (game.gLevel.safeClicks === 0) return;
         game.gLevel.safeClicks--;
-        document.querySelector('.safe-click').innerText = (game.gLevel.safeClicks === 1) ? `🧐` : (game.gLevel.safeClicks === 2) ? '🧐🧐' : ''
+        document.querySelector('.safe-click').innerText = (game.gLevel.safeClicks === 1) ? `🔑` : (game.gLevel.safeClicks === 2) ? '🔑🔑' : ''
         var safeCells = [];
     
         for (var i = 0; i < game.gBoard.length; i++) {

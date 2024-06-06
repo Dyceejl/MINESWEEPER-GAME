@@ -20,7 +20,7 @@ class Timer {
     }
 
     setBestTime(levelSize) {
-        var level = (levelSize === 4) ? 'besttimeeasy' : (levelSize === 8) ? 'besttimemedium' : 'besttimehard';
+        var level = (levelSize === 6) ? 'besttimeeasy' : (levelSize === 10) ? 'besttimemedium' : 'besttimehard';
         var currGameTime = game.gGame.secsPassed;
     
         if (!localStorage[level] || currGameTime < +localStorage[level]) {
@@ -31,10 +31,10 @@ class Timer {
     }
 
     renderBestTime() {
-        if (game.gLevel.bestTime < 60) gElBestTimeDisplay.innerText = `⏰record: ${game.gLevel.bestTime} secs`
+        if (game.gLevel.bestTime < 60) gElBestTimeDisplay.innerText = `⏱timer: ${game.gLevel.bestTime} secs`
         else if (game.gLevel.bestTime > 60) {
             var bestTimeMins = (game.gLevel.bestTime / 60).toFixed(2)
-            gElBestTimeDisplay.innerText = `⏰record: ${bestTimeMins} mins`
+            gElBestTimeDisplay.innerText = `⏱timer: ${bestTimeMins} mins`
         }
     }
 }

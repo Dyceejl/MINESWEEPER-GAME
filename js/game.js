@@ -10,8 +10,8 @@ class Game {
         isSoundOn: true,
       };
       this.gLevel = {
-        size: 4,
-        mines: 2,
+        size: 6,
+        mines: 3,
         lives: 1,
         bestTime: +localStorage.besttimeeasy,
         safeClicks: 1,
@@ -23,9 +23,9 @@ class Game {
       this.gBoard = this.buildBoard(this.gLevel.size);
       renderer.renderBoard(this.gBoard);
   
-      gElLives.innerText = (this.gLevel.size === 4) ? '💟' : '💟💟💟';
-      document.querySelector('.sneak-peek').innerText = (this.gLevel.size === 4) ? '💡' : '💡💡💡';
-      document.querySelector('.safe-click').innerText = (this.gLevel.size === 4) ? `🧐` : (this.gLevel.size === 8) ? '🧐🧐' : '🧐🧐🧐'
+      gElLives.innerText = (this.gLevel.size === 6) ? '🩷' : '🩷🩷🩷';
+      document.querySelector('.sneak-peek').innerText = (this.gLevel.size === 6) ? '🔍' : '🔍🔍🔍';
+      document.querySelector('.safe-click').innerText = (this.gLevel.size === 6) ? `🔑` : (this.gLevel.size === 10) ? '🔑🔑' : '🔑🔑🔑'
   
       if (!this.gLevel.bestTime) return;
       timer.renderBestTime();
@@ -115,8 +115,8 @@ class Game {
                 this.gLevel.lives--;
                 feature.gMoves.push(cell);
                 renderer.renderCell(i, j, MINE);
-                if (this.gLevel.lives === 2) gElLives.innerText = '💟💟💔';
-                else if (this.gLevel.lives === 1) gElLives.innerText = '💟💔💔';
+                if (this.gLevel.lives === 2) gElLives.innerText = '🩷🩷💔';
+                else if (this.gLevel.lives === 1) gElLives.innerText = '🩷💔💔';
                 gElPlayer.innerText = SAD;
                 return;
             }
@@ -174,7 +174,7 @@ class Game {
             if (this.gGame.isSoundOn) soundManager.playWinSound();
         }
         else if (status === 'lost') {
-            gElLives.innerText = (this.gLevel.size === 4) ? '💔' : '💔💔💔';
+            gElLives.innerText = (this.gLevel.size === 6) ? '💔' : '💔💔💔';
             gElPlayer.innerText = DEAD;
             if (this.gGame.isSoundOn) soundManager.playLoseSound();
         }
@@ -198,9 +198,9 @@ class Game {
         this.gGame.markedCount = 0;
         this.gGame.secsPassed = 0;
         document.querySelector('.timer').innerHTML = '00:00';
-        this.gLevel.hints = (this.gLevel.size === 4) ? 1 : 3;
-        this.gLevel.lives = (this.gLevel.size === 4) ? 1 : 3;
-        this.gLevel.safeClicks = (this.gLevel.size === 4) ? 1 : (this.gLevel.size === 8) ? 2 : 3;
+        this.gLevel.hints = (this.gLevel.size === 6) ? 1 : 3;
+        this.gLevel.lives = (this.gLevel.size === 6) ? 1 : 3;
+        this.gLevel.safeClicks = (this.gLevel.size === 6) ? 1 : (this.gLevel.size === 10) ? 2 : 3;
         feature.gMoves = [];
         feature.gNrMoves = [];
         document.querySelector('.best-time').innerText = '';
