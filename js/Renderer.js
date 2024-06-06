@@ -6,11 +6,11 @@ class Renderer {
         var elAudioControl = document.querySelector('.audio-control');
         if (game.gGame.isSoundOn) {
             game.gGame.isSoundOn = false;
-            elAudioControl.innerText = '🔇 muted'
+            elAudioControl.innerText = '🔇'
         }
         else {
             game.gGame.isSoundOn = true;
-            elAudioControl.innerText = '🔊 sound on'
+            elAudioControl.innerText = '🔊'
         }
     }
 

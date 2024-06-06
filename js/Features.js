@@ -84,11 +84,6 @@ class Features{
 
     reverseMove(obj) {
         obj.isShown = false;
-        if (obj.isMine) {
-            game.gLevel.lives++;
-            gElLives.innerText = (gElLives.innerText === '💟💟💔') ? '💟💟💟' : '💟💟💔';
-            document.querySelector('.player').innerText = HAPPY;
-        }
         document.querySelector(`.cell${obj.pos.i}-${obj.pos.j}`).classList.remove('pressed');
         renderer.renderCell(obj.pos.i, obj.pos.j, ' ');
     }
